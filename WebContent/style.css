@@ -1,0 +1,181 @@
+
+html{
+	overflow-x:hidden;width:100vw}
+body{
+	-webkit-tap-highlight-color:transparent;-webkit-touch-callout:none;margin:0;padding:0}
+	
+	@keyframes move_wave {
+    0% {
+        transform: translateX(0) translateZ(0) scaleY(1)
+    }
+    50% {
+        transform: translateX(-25%) translateZ(0) scaleY(0.55)
+    }
+    100% {
+        transform: translateX(-50%) translateZ(0) scaleY(1)
+    }
+}
+.waveWrapper {
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+	z-index:-100;
+    margin: auto;
+}
+.waveWrapperInner {
+    position: absolute;
+    width: 100%;
+    overflow: hidden;
+    height: 100%;
+    bottom: -1px;
+    background-image: linear-gradient(to top, #86377b 20%, #27273c 80%);
+}
+.bgTop {
+    z-index: 15;
+    opacity: 0.5;
+}
+.bgMiddle {
+    z-index: 10;
+    opacity: 0.75;
+}
+.bgBottom {
+    z-index: 5;
+}
+.wave {
+    position: absolute;
+    left: 0;
+    width: 200%;
+    height: 100%;
+    background-repeat: repeat no-repeat;
+    background-position: 0 bottom;
+    transform-origin: center bottom;
+}
+.waveTop {
+    background-size: 50% 100px;
+}
+.waveAnimation .waveTop {
+  animation: move-wave 3s;
+   -webkit-animation: move-wave 3s;
+   -webkit-animation-delay: 1s;
+   animation-delay: 1s;
+}
+.waveMiddle {
+    background-size: 50% 120px;
+}
+.waveAnimation .waveMiddle {
+    animation: move_wave 10s linear infinite;
+}
+.waveBottom {
+    background-size: 50% 100px;
+}
+.waveAnimation .waveBottom {
+    animation: move_wave 15s linear infinite;
+}
+
+th {
+  color: #ffffff;
+}
+	
+button{
+  display:none;
+  width: 100%;
+  padding: 15px;
+  font-weight: bold;
+  margin: 5px;
+  color: #fff;
+  background: rgba(105, 105, 105);
+  border: 1px solid #408080;
+  border-radius: 5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition:         0.08s ease-in;
+  -moz-transition:    0.08s ease-in;
+  -webkit-transition: 0.08s ease-in;
+}
+
+button:hover{
+	background: #fff;
+	color: rgba(105, 105, 105);
+	border: 1px solid rgba(105, 105, 105);
+}
+
+input{
+	display:none;
+}
+	
+ul.topnav {
+  list-style-type: none;
+  margin: 0;
+  margin-right:0.5rem;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+
+ul.topnav li {float: left;}
+
+ul.topnav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ul.topnav li a:hover:not(.active) {background-color: #111;}
+
+ul.topnav li a.active {background-color: #4CAF50;}
+
+ul.topnav li.right {float: right;}
+
+@media screen and (max-width: 650px) {
+  ul.topnav li.right, 
+  ul.topnav li {float: none;}
+}
+
+@media screen and (max-width: 400px) {
+   #State-left { 
+    float: none;
+    margin-right:0;
+    width:auto;   
+  }
+}
+
+.wrapper {
+	overflow:hidden;
+}
+
+.wrapper div {
+   min-height: 200px;
+   padding: 10px;
+}
+
+#bingwidget {
+	display: inline-block;
+}
+
+#State-left {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,1);
+  border: 1px solid rgba(105, 105, 105,0.4);
+  border-radius: 5px;
+  background-color: rgba(105, 105, 105, 0.4);
+  float:left; 
+  margin:8px;
+  width:45%;
+}
+#State-right { 
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,1);
+  border: 1px solid rgba(105, 105, 105,0.4);
+  border-radius: 5px;
+  background-color: rgba(105, 105, 105, 0.4);
+  margin:8px;
+  overflow:hidden;
+  width:50%;
+}
+#State-right:hover,#State-left:hover{
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,1);
+}
